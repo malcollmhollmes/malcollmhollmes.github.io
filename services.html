@@ -1,0 +1,305 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Services - Malcollm Hollmes</title>
+<meta name="description" content="Training, nutrition, and emotional well-being with Malcollm Hollmes. No hype. No 30-day transformations. The boring things that work.">
+<style>
+  * { box-sizing: border-box; }
+  body {
+    margin: 0;
+    font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+    background: #eef3f8;
+    color: #2d3748;
+    line-height: 1.6;
+  }
+  .topbar {
+    background: linear-gradient(135deg, #1e5799 0%, #2989d8 50%, #38b2ac 100%);
+    color: #fff;
+    padding: 18px 24px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    box-shadow: 0 2px 8px rgba(0,0,0,.25);
+  }
+  .topbar .brand { font-size: 22px; font-weight: bold; letter-spacing: .5px; }
+  .topbar nav a {
+    color: #fff;
+    text-decoration: none;
+    margin-left: 22px;
+    font-size: 15px;
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    opacity: .92;
+  }
+  .topbar nav a:hover { opacity: 1; text-decoration: underline; }
+  .wrap { max-width: 1000px; margin: 0 auto; padding: 0 20px; }
+
+  .hero {
+    background: #fff;
+    margin: 32px auto;
+    border-radius: 12px;
+    box-shadow: 0 4px 18px rgba(30,87,153,.15);
+    display: flex;
+    flex-wrap: wrap;
+    overflow: hidden;
+  }
+  .hero img { width: 100%; max-width: 440px; object-fit: cover; display: block; }
+  .hero .hero-text { padding: 40px 36px; flex: 1; min-width: 280px; }
+  .hero h1 { font-size: 38px; margin: 0 0 10px; color: #1e5799; }
+  .hero p.sub { font-size: 19px; color: #4a5568; margin: 0 0 22px; }
+
+  .btn {
+    display: inline-block;
+    background: linear-gradient(180deg, #f6ad55 0%, #ed8936 100%);
+    color: #fff;
+    font-size: 18px;
+    font-weight: bold;
+    padding: 14px 34px;
+    border-radius: 999px;
+    text-decoration: none;
+    box-shadow: 0 3px 0 #c05621, 0 6px 14px rgba(0,0,0,.18);
+    text-transform: uppercase;
+    letter-spacing: 1px;
+  }
+  .btn:hover { filter: brightness(1.05); }
+
+  .strip {
+    background: linear-gradient(90deg, #38b2ac, #2989d8);
+    color: #fff;
+    text-align: center;
+    font-size: 17px;
+    font-weight: 600;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+    padding: 12px 16px;
+    border-radius: 8px;
+    margin: 8px auto 32px;
+  }
+
+  .service {
+    background: #fff;
+    border-radius: 12px;
+    box-shadow: 0 4px 18px rgba(30,87,153,.12);
+    display: flex;
+    flex-wrap: wrap;
+    overflow: hidden;
+    margin-bottom: 32px;
+  }
+  .service img { width: 100%; max-width: 400px; object-fit: cover; display: block; }
+  .service .s-text { padding: 34px 34px; flex: 1; min-width: 280px; }
+  .service h2 { font-size: 27px; margin: 0 0 12px; color: #1e5799; }
+  .service h2 .tag {
+    display: inline-block;
+    font-size: 12px;
+    vertical-align: middle;
+    background: #38b2ac;
+    color: #fff;
+    border-radius: 999px;
+    padding: 3px 12px;
+    margin-left: 10px;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+  }
+  .service p { margin: 0 0 10px; font-size: 16.5px; }
+  .service.reverse { flex-direction: row-reverse; }
+
+  .section-title {
+    text-align: center;
+    font-size: 30px;
+    color: #1e5799;
+    margin: 44px 0 6px;
+  }
+  .section-sub { text-align: center; color: #4a5568; margin: 0 0 26px; font-size: 16.5px; }
+
+  .cards { display: flex; flex-wrap: wrap; gap: 22px; justify-content: center; margin-bottom: 12px; }
+  .card {
+    background: #fff;
+    border-radius: 12px;
+    box-shadow: 0 4px 18px rgba(30,87,153,.12);
+    border-top: 6px solid #38b2ac;
+    width: 300px;
+    padding: 26px 24px 30px;
+    text-align: center;
+  }
+  .card h3 { margin: 0 0 4px; font-size: 21px; color: #1e5799; }
+  .card .price { font-size: 34px; font-weight: bold; color: #ed8936; margin: 6px 0 12px; }
+  .card p { font-size: 15.5px; color: #4a5568; margin: 0 0 14px; }
+
+  .tcard { border-top-color: #ed8936; position: relative; text-align: left; }
+  .sample-badge {
+    display: inline-block;
+    background: #e53e3e;
+    color: #fff;
+    font-size: 12px;
+    font-weight: bold;
+    letter-spacing: .5px;
+    border-radius: 6px;
+    padding: 5px 10px;
+    margin-bottom: 12px;
+    text-transform: uppercase;
+  }
+  .tcard blockquote {
+    margin: 0 0 12px;
+    font-family: Georgia, "Times New Roman", serif;
+    font-style: italic;
+    font-size: 16.5px;
+    color: #2d3748;
+  }
+  .tcard .who { font-size: 14px; color: #718096; }
+
+  .cta-band {
+    background: linear-gradient(135deg, #1e5799, #38b2ac);
+    border-radius: 12px;
+    color: #fff;
+    text-align: center;
+    padding: 40px 24px;
+    margin: 36px auto;
+    box-shadow: 0 4px 18px rgba(30,87,153,.2);
+  }
+  .cta-band h2 { font-size: 30px; margin: 0 0 8px; }
+  .cta-band p { margin: 0 0 22px; font-size: 17px; opacity: .95; }
+
+  .fine {
+    background: #fff;
+    border-radius: 12px;
+    box-shadow: 0 4px 18px rgba(30,87,153,.12);
+    padding: 22px 26px;
+    font-size: 14.5px;
+    color: #4a5568;
+    margin-bottom: 32px;
+  }
+
+  footer {
+    text-align: center;
+    color: #718096;
+    font-size: 13.5px;
+    padding: 22px 16px 40px;
+  }
+  footer a { color: #2989d8; }
+
+  @media (max-width: 720px) {
+    .hero img, .service img { max-width: 100%; }
+    .topbar { flex-direction: column; gap: 8px; }
+    .topbar nav a { margin: 0 10px; }
+    .hero h1 { font-size: 30px; }
+  }
+</style>
+</head>
+<body>
+
+<div class="topbar">
+  <div class="brand">Malcollm Hollmes</div>
+  <nav>
+    <a href="index.html">Home</a>
+    <a href="services.html">Services</a>
+    <a href="mailto:malcollmhollmes@gmail.com">Contact</a>
+  </nav>
+</div>
+
+<div class="wrap">
+
+  <div class="hero">
+    <img src="3-malcollm-park.jpg" alt="Malcollm Hollmes walking in a park, smiling patiently">
+    <div class="hero-text">
+      <h1>Hi, I'm Malcollm.</h1>
+      <p class="sub">I work with people on training, nutrition, and emotional well-being. No hype. No 30-day transformations. No secret system with a name in all caps. Just the boring things that work, done on purpose.</p>
+      <a class="btn" href="mailto:malcollmhollmes@gmail.com">Book a free call</a>
+    </div>
+  </div>
+
+  <div class="strip">Training &nbsp;&middot;&nbsp; Nutrition &nbsp;&middot;&nbsp; Emotional Well-Being</div>
+
+  <div class="service">
+    <img src="1-malcollm-gym.jpg" alt="Malcollm in a gym, leaning on a loaded barbell">
+    <div class="s-text">
+      <h2>Training <span class="tag">Minus the slop</span></h2>
+      <p>Most fitness content is a 30-day shred, a secret exercise, or a coach a language model made up this morning. You do not need any of that.</p>
+      <p>Show up. Add a little weight or a few reps over time. Form before ego. Walk a lot. Sleep. Take the rest day.</p>
+      <p>It is boring. That is how you can tell it works.</p>
+    </div>
+  </div>
+
+  <div class="service reverse">
+    <img src="2-malcollm-kitchen.jpg" alt="Malcollm cooking vegetables in his kitchen">
+    <div class="s-text">
+      <h2>Nutrition <span class="tag">Minus the slop</span></h2>
+      <p>Ultra-processed food runs the same playbook as your feed: engineered so you keep going back. You are not weak. The product is good at its job.</p>
+      <p>Mostly real food. Protein and plants at most meals. Water. Cook a little. No diets, no miracle foods, no shame.</p>
+      <p>I am more interested in why you eat at 11pm than in what you ate.</p>
+    </div>
+  </div>
+
+  <div class="service">
+    <img src="3-malcollm-park.jpg" alt="Malcollm on a tree-lined path in morning light">
+    <div class="s-text">
+      <h2>Emotional Well-Being <span class="tag">The actual work</span></h2>
+      <p>Sit with it before you manage it. Name it before you fix it. Ask when it started, and what else started that year.</p>
+      <p>Go for a walk. Call a person. Be in the same room as someone who likes you. These are not hacks. They are free, which is why nobody sells them.</p>
+      <p>And go to the doctor. Then ask the other question nobody asked you.</p>
+    </div>
+  </div>
+
+  <h2 class="section-title">Programs &amp; Pricing</h2>
+  <p class="section-sub">Three tiers. One price.</p>
+
+  <div class="cards">
+    <div class="card">
+      <h3>The Walk</h3>
+      <div class="price">Free</div>
+      <p>We go for a walk. We talk. You talk, mostly. I ask when it started.</p>
+    </div>
+    <div class="card">
+      <h3>The Boring Program</h3>
+      <div class="price">Free</div>
+      <p>Sleep. Walk. Lift a little more over time. Real food. Say the true sentence. Repeat until it sticks.</p>
+    </div>
+    <div class="card">
+      <h3>The Everything</h3>
+      <div class="price">Free</div>
+      <p>It is all free. It was always free. The price was never the hard part.</p>
+    </div>
+  </div>
+
+  <h2 class="section-title">What People Are Saying</h2>
+  <p class="section-sub">Every quote below is a clearly marked sample, waiting for a real one.</p>
+
+  <div class="cards">
+    <div class="card tcard">
+      <span class="sample-badge">Sample testimonial &mdash; replace before launch</span>
+      <blockquote>"He told me to go for a walk and call my brother. I was expecting an app."</blockquote>
+      <div class="who">Sample client, training</div>
+    </div>
+    <div class="card tcard">
+      <span class="sample-badge">Sample testimonial &mdash; replace before launch</span>
+      <blockquote>"No meal plan. No macros. Just questions I did not want to answer."</blockquote>
+      <div class="who">Sample client, nutrition</div>
+    </div>
+    <div class="card tcard">
+      <span class="sample-badge">Sample testimonial &mdash; replace before launch</span>
+      <blockquote>"The first call was free. So was the second. I checked twice."</blockquote>
+      <div class="who">Sample client, emotional well-being</div>
+    </div>
+  </div>
+
+  <div class="cta-band">
+    <h2>Start today.</h2>
+    <p>One email. No funnel, no sequence, no "last chance".</p>
+    <a class="btn" href="mailto:malcollmhollmes@gmail.com">Get in touch</a>
+  </div>
+
+  <div class="fine">
+    <strong>The fine print, in normal size:</strong> Malcollm is not a doctor, a therapist, or a dietitian, and he does not play one on this website. Nothing here is medical advice, and nothing here replaces your treatment. The work is the boring kind: sleep, walking, lifting, real food, and saying the true sentence. Go to the doctor. Then ask the other question nobody asked you.
+  </div>
+
+</div>
+
+<footer>
+  <p>Malcollm Hollmes &middot; <a href="mailto:malcollmhollmes@gmail.com">malcollmhollmes@gmail.com</a> &middot; <a href="index.html">Back to the plain page</a></p>
+  <p>No cookies, no analytics, no JavaScript. Some things on this site really are what they look like.</p>
+</footer>
+
+</body>
+</html>
